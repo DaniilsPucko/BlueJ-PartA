@@ -1,5 +1,38 @@
 LabClass co452Lab = new LabClass(3);
-Student veena = new Student("Veena Patel", "20388712");
-Student gita = new Student("Gita Ralhan", "20844312");
-Student tim = new Student("Tim Lee", "20199812");
-co452Lab.enrollStudent(gita);
+co452Lab.setInstructor("Nicholas Day");
+co452Lab.setRoom("G100");
+co452Lab.setTime("Tuesday 29th September 2020");
+Student lucy = new Student("Lucy Gonsales", "20200908");
+Student rick = new Student("Rick Grimes", "20201305");
+Student robert = new Student("Robert Johnes", "20208787");
+Student paul = new Student("Paul Hose", "20209999");
+lucy.addCredits(20);
+rick.addCredits(20);
+robert.addCredits(20);
+rick.getCredits()
+    returned int 20
+lucy.changeName("Lucia Gonsales");
+lucy.getName()
+    returned String "Lucia Gonsales"
+co452Lab.enrollStudent(lucy);
+co452Lab.enrollStudent(rick);
+co452Lab.enrollStudent(robert);
+co452Lab.enrollStudent(paul);
+The class is full, you cannot enrol.
+Course webDevelopment = new Course("Web Development", "co456");
+webDevelopment.print();
+Course title: Web Development, Course code number: co456
+lucy.addCourse(webDevelopment);
+rick.addCourse(webDevelopment);
+robert.addCourse(webDevelopment);
+co452Lab.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Lucia Gonsales, student ID: 20200908, credits: 20
+Course title: Web Development, Course code number: co456
+Rick Grimes, student ID: 20201305, credits: 20
+Course title: Web Development, Course code number: co456
+Robert Johnes, student ID: 20208787, credits: 20
+Course title: Web Development, Course code number: co456
+Number of students: 3
