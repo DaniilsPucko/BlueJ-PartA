@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Course here.
+ * Course class - making courses for students
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Daniils Pucko) 
+ * @version (04.10.2020)
  */
 public class Course
 {
@@ -17,8 +17,8 @@ public class Course
      */
     public Course(String courseTitle, String codeNumber)
     {
-    title = courseTitle;
-    code = codeNumber;
+        title = courseTitle;
+        code = codeNumber;
     }
     
     /**
@@ -26,7 +26,7 @@ public class Course
      */
     public void print()
     {
-     System.out.println("Course title: " + title + ", Course code number: " + code);  
+        System.out.println("Course title: " + title + ", Course code number: " + code);  
     }
 
 
