@@ -129,4 +129,9 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    
+    public void addCoin(Coin coin)
+    {
+       balance = balance + coin.getValue(); 
+    }
 }
