@@ -118,6 +118,7 @@ public class TicketMachine
      */
     public void addCoin(Coin coin)
     {
-       balance = balance + coin.getValue(); 
+       balance = balance + coin.getValue();
+       System.out.println("Balance is: " + balance);
     }
 }
