@@ -72,23 +72,6 @@ public class TicketMachine
     }
 
     /**
-     * Receive an amount of money from a customer.
-     * Check that the amount is sensible.
-     */
-    public void insertMoney(int amount)
-    {
-        if(amount > 0) 
-        {
-            balance = balance + amount;
-        }
-        else 
-        {
-            System.out.println("Use a positive amount rather than: " +
-                               amount);
-        }
-    }
-
-    /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.
@@ -130,6 +113,9 @@ public class TicketMachine
         return amountToRefund;
     }
     
+    /**
+     * Adds a coin to balance
+     */
     public void addCoin(Coin coin)
     {
        balance = balance + coin.getValue(); 
