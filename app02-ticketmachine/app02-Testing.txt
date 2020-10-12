@@ -1,0 +1,59 @@
+TicketMachine _TicketMachine = new TicketMachine();
+Ticket aylesbury = new Ticket(220, "Aylesbury");
+Ticket amersham = new Ticket(300, "Amersham");
+Ticket highwycombe = new Ticket(330, "High Wycombe");
+_TicketMachine.printList();
+_TicketMachine.addTicket(aylesbury);
+_TicketMachine.addTicket(amersham);
+_TicketMachine.addTicket(highwycombe);
+_TicketMachine.printList();
+Ticket price: 220 pennies, ticket destination: Aylesbury
+Ticket price: 300 pennies, ticket destination: Amersham
+Ticket price: 330 pennies, ticket destination: High Wycombe
+_TicketMachine.getBalance()
+    returned int 0
+_TicketMachine.addCoin(P100);
+Balance is: 100
+_TicketMachine.getBalance()
+    returned int 100
+_TicketMachine.buyTicket(aylesbury);
+You must insert at least: 120 more cents.
+_TicketMachine.addCoin(P200);
+Balance is: 300
+_TicketMachine.buyTicket(aylesbury);
+##################
+Ticket destination: Aylesbury
+Ticket price: 220 pennies
+Date: 12/окт./2020
+##################
+
+_TicketMachine.refundBalance()
+    returned int 80
+_TicketMachine.getBalance()
+    returned int 0
+_TicketMachine.addCoin(P200);
+Balance is: 200
+_TicketMachine.addCoin(P200);
+Balance is: 400
+_TicketMachine.addCoin(P200);
+Balance is: 600
+_TicketMachine.addCoin(P100);
+Balance is: 700
+_TicketMachine.buyTicket(amersham);
+##################
+Ticket destination: Amersham
+Ticket price: 300 pennies
+Date: 12/окт./2020
+##################
+
+_TicketMachine.buyTicket(highwycombe);
+##################
+Ticket destination: High Wycombe
+Ticket price: 330 pennies
+Date: 12/окт./2020
+##################
+
+_TicketMachine.getBalance()
+    returned int 70
+_TicketMachine.refundBalance()
+    returned int 70
