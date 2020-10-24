@@ -2,8 +2,8 @@
 /**
  * Write a description of class Course here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Daniils Pucko) 
+ * @version (24.10.2020)
  */
 public class Course
 {
