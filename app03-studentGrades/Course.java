@@ -8,13 +8,23 @@ import java.util.*;
 public class Course
 {
     // instance variables - replace the example below with your own
-    private ArrayList<Module> modules;
+    public ArrayList<Module> modules;
+    public String title;
 
     /**
      * Constructor for objects of class Course
      */
-    public Course()
+    public Course(String coursename)
     {
-        
+        title = coursename;
     }
+    
+    /**
+     * Add modules to course.
+     */
+    public void addModule(Module newModule)
+    {
+        modules.add(newModule);
+    }
+    
 }
