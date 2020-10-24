@@ -7,21 +7,36 @@
  */
 public class Module
 {
-    // instance variables - replace the example below with your own
-    private int x;
-    private String title;
-    private String code;
-    private int mark;
+    public String title;
+    public String code;
+    public int mark;
 
     /**
      * Constructor for objects of class Module
      */
-    public Module(String fullTitle, String codeNumber, int percentageMark)
+    public Module(String fullTitle, String codeNumber)
     {
         title = fullTitle;
         code = codeNumber;
+        mark = 0;
+    }
+    
+    /**
+     * Add percentageMark
+     */
+    public void addMark(int percentageMark)
+    {
         mark = percentageMark;
     }
     
+    /**
+     * Prints module's details
+     */
+    public void printModule()
+    {
+        System.out.println("Module title: " + title);
+        System.out.println("Module code number: " + code);
+        System.out.println("Students mark: " + mark);
+    }
     
 }
