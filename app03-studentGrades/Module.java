@@ -10,15 +10,15 @@ public class Module
     // instance variables - replace the example below with your own
     private int x;
     private String title;
-    private int mark;
+    private String code;
 
     /**
      * Constructor for objects of class Module
      */
-    public Module(String fullTitle, int fullMark)
+    public Module(String fullTitle, String codeNumber)
     {
         title = fullTitle;
-        mark = fullMark;
+        code = codeNumber;
     }
     
     

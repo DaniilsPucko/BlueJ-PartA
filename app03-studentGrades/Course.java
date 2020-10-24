@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Course here.
  * 
@@ -9,25 +9,26 @@ public class Course
 {
     // instance variables - replace the example below with your own
     private int x;
-
+    public ArrayList<Module> modules;
+    private String title;
+    private String code;
+    
+    
     /**
      * Constructor for objects of class Course
      */
-    public Course()
+    public Course(String fullTitle, String fullCode)
     {
-        // initialise instance variables
-        x = 0;
+        title = fullTitle;
+        code = fullCode;
+        modules = new ArrayList<Module>();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
+     * Add module to course
      */
-    public int sampleMethod(int y)
+    public void addModule(Module newModule)
     {
-        // put your code here
-        return x + y;
+        modules.add(newModule);
     }
 }
