@@ -11,14 +11,16 @@ public class Module
     private int x;
     private String title;
     private String code;
+    private int mark;
 
     /**
      * Constructor for objects of class Module
      */
-    public Module(String fullTitle, String codeNumber)
+    public Module(String fullTitle, String codeNumber, int percentageMark)
     {
         title = fullTitle;
         code = codeNumber;
+        mark = percentageMark;
     }
     
     

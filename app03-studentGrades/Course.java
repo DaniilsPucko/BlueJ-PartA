@@ -12,6 +12,7 @@ public class Course
     public ArrayList<Module> modules;
     private String title;
     private String code;
+    private int capacity;
     
     
     /**
@@ -22,6 +23,7 @@ public class Course
         title = fullTitle;
         code = fullCode;
         modules = new ArrayList<Module>();
+        capacity = 4;
     }
 
     /**
@@ -29,6 +31,13 @@ public class Course
      */
     public void addModule(Module newModule)
     {
-        modules.add(newModule);
+         if(modules.size() == capacity) 
+        {
+            System.out.println("The Course is full, you cannot add more modules.");
+        }
+         else
+        {
+            modules.add(newModule);
+        }
     }
 }

@@ -15,6 +15,8 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
+    public Course course;
+    
     
     /**
      * Create a new student with a given name and ID number.
@@ -25,7 +27,15 @@ public class Student
         id = studentID;
         credits = 0;
     }
-
+    
+    /**
+     * Enroll Student on Course
+     */
+    public void enrollStudent(Course newCourse)
+    {
+        course = newCourse;
+    }
+          
     /**
      * Return the full name of this student.
      */
