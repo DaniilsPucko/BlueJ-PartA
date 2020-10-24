@@ -27,7 +27,7 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
-        courses = new ArrayList<Course>();
+        courses = new ArrayList<Course>(); 
     }
     
     /**
