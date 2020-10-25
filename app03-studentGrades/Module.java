@@ -39,4 +39,12 @@ public class Module
         System.out.println("Students mark: " + mark);
     }
     
+    /**
+     * Get module mark.
+     */
+    public int getMark()
+    {
+        return mark;
+    }
+    
 }
