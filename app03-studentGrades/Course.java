@@ -12,6 +12,8 @@ public class Course
     public String title;
     private int capacity;
     public int grade;
+    public int finalgrade;
+    public String mark;
     
     /**
      * Constructor for objects of class Course
@@ -39,6 +41,42 @@ public class Course
     }
     
     /**
+     * Calculates grade sum
+     */
+    public void grade(Module module)
+    {
+        grade = grade + module.getMark();
+    }
+    
+    /**
+     * Converts final grade to letter
+     */
+    public void finalGrade()
+    {
+        finalgrade = grade / 4;
+        if(finalgrade <= 39)
+        {
+            mark = "F";
+        }
+        else if(finalgrade<=49)
+             {
+                 mark = "D";
+             }
+             else if(finalgrade<=59)
+                  {
+                      mark = "C";
+                  }
+                  else if(finalgrade<=69)
+                       {
+                           mark = "B";
+                       }
+                       else
+                       {
+                           mark = "A";
+                       }
+    }
+    
+    /**
      * Prints info about course and its modules.
      */
     public void printCourse()
@@ -48,6 +86,6 @@ public class Course
         {
             module.printModule();
         }
-        
+        System.out.println("Course final grade: " + mark);
     }
 }
