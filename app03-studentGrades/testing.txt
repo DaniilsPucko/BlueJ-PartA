@@ -1,0 +1,56 @@
+Student daniils = new Student("Daniils Pucko", "22020755");
+Course cybersecurity = new Course("CyberSecurity");
+daniils.enrollStudent(cybersecurity);
+Module module1 = new Module("Computer Architectures", "co451");
+Module module2 = new Module("Web Development", "co452");
+Module module3 = new Module("Programming Concepts", "co453");
+Module module4 = new Module("Proffessional Practice", "co454");
+module1.addMark(65);
+module2.addMark(60);
+module3.addMark(75);
+module4.addMark(80);
+cybersecurity.addModule(module1);
+cybersecurity.addModule(module2);
+cybersecurity.addModule(module3);
+cybersecurity.addModule(module4);
+module4.printModule();
+Module title: Proffessional Practice
+Module code number: co454
+Students mark: 80
+cybersecurity.printCourse();
+Course title: CyberSecurity
+Module title: Computer Architectures
+Module code number: co451
+Students mark: 65
+Module title: Web Development
+Module code number: co452
+Students mark: 60
+Module title: Programming Concepts
+Module code number: co453
+Students mark: 75
+Module title: Proffessional Practice
+Module code number: co454
+Students mark: 80
+Course final grade: null
+cybersecurity.grade(module1);
+cybersecurity.grade(module2);
+cybersecurity.grade(module3);
+cybersecurity.grade(module4);
+cybersecurity.finalGrade();
+daniils.addCredits(60);
+daniils.print();
+Daniils Pucko, student ID: 22020755, credits: 60
+Course title: CyberSecurity
+Module title: Computer Architectures
+Module code number: co451
+Students mark: 65
+Module title: Web Development
+Module code number: co452
+Students mark: 60
+Module title: Programming Concepts
+Module code number: co453
+Students mark: 75
+Module title: Proffessional Practice
+Module code number: co454
+Students mark: 80
+Course final grade: A
