@@ -10,6 +10,8 @@ public class Module
     public String title;
     public String code;
     public int mark;
+    public int credit;
+
 
     /**
      * Constructor for objects of class Module
@@ -19,6 +21,7 @@ public class Module
         title = fullTitle;
         code = codeNumber;
         mark = 0;
+        credit = 0;
     }
     
     /**
@@ -29,6 +32,20 @@ public class Module
         mark = percentageMark;
     }
     
+     /**
+     * Add credits to module
+     */
+    public void addCredits(int cred)
+    {
+        if(mark >= 40){
+            credit = cred;
+        }
+        else
+        {
+            System.out.println("Your mark is lower than 40%, please correct it to finish module");
+        }   
+    }
+    
     /**
      * Prints module's details
      */
@@ -36,8 +53,19 @@ public class Module
     {
         System.out.println("Module title: " + title);
         System.out.println("Module code number: " + code);
-        System.out.println("Students mark: " + mark);
+        System.out.println("Students mark: " + mark + "%");
+         if(credit == 15)
+        {
+            System.out.println("Module credits: " + credit);
+            System.out.println("Module finished");
+        }
+        else
+        {
+            System.out.println("Module credits: " + credit);
+            System.out.println("Module is not finished");
+        }
     }
+    
     
     /**
      * Get module mark.
