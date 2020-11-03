@@ -32,10 +32,10 @@ public class StockDemo
     public void demo()
     {
         // Show details of all of the products.
-        manager.printProductDetails();
+        manager.printAllProducts();
         // Take delivery of 5 items of one of the products.
         manager.delivery(132, 5);
-        manager.printProductDetails();
+        manager.printAllProducts();
     }
     
     /**
