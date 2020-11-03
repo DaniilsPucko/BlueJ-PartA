@@ -51,6 +51,7 @@ public class StockManager
             if(product.getID()==id)
             {
                 stock.remove(product);
+                break;
             }
         }
     }
