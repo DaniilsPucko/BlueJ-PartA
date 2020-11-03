@@ -76,10 +76,6 @@ public class StockManager
             {
                 product.increaseQuantity(amount);
             }
-            else
-            {
-                System.out.println("Cannot found product with this ID");
-            }
         }
     }
     
@@ -165,6 +161,12 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
+        for (Product product : stock) {
+            if(product.getID()==id)
+            {
+                System.out.println(product.getQuantity());
+            }
+        }
         return 0;
     }
     
@@ -181,10 +183,7 @@ public class StockManager
         {
             System.out.println(product.toString());
         }
-        else
-            {
-                System.out.println("Cannot found product with this ID");
-            }
+        
     }
 
     /**
