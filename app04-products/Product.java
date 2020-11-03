@@ -25,6 +25,14 @@ public class Product
         this.name = name;
         quantity = 0;
     }
+    
+    /**
+     * Rename a product
+     */
+    public void rename (String newName)
+    {
+        this.name=newName;
+    }
 
     /**
      * @return The product's id.
