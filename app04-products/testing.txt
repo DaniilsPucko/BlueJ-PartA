@@ -1,0 +1,115 @@
+StockManager stock = new StockManager();
+StockDemo demo = new StockDemo(stock);
+stock.printAllProducts();
+
+Daniil's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 0
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: Huawei P40 Pro stock level: 0
+105: Honor 10 stock level: 0
+106: Samsung A5 stock level: 0
+107: Xiaomi Mi 10 stock level: 0
+108: Xiaomi RedMi Note stock level: 0
+109: Samsung Galaxy Tab 2 stock level: 0
+110: Apple IPOD stock level: 0
+
+demo.demoDeliverProducts();
+
+Daniil's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 0
+102: Apple iPhone 12 stock level: 0
+103: Google Pixel 4A stock level: 0
+104: Huawei P40 Pro stock level: 0
+105: Honor 10 stock level: 0
+106: Samsung A5 stock level: 0
+107: Xiaomi Mi 10 stock level: 0
+108: Xiaomi RedMi Note stock level: 0
+109: Samsung Galaxy Tab 2 stock level: 0
+110: Apple IPOD stock level: 0
+
+Updated list of products.
+
+Daniil's Stock List
+====================
+
+101: Samsung Galaxy S20 stock level: 5
+102: Apple iPhone 12 stock level: 23
+103: Google Pixel 4A stock level: 14
+104: Huawei P40 Pro stock level: 12
+105: Honor 10 stock level: 17
+106: Samsung A5 stock level: 1
+107: Xiaomi Mi 10 stock level: 22
+108: Xiaomi RedMi Note stock level: 29
+109: Samsung Galaxy Tab 2 stock level: 34
+110: Apple IPOD stock level: 40
+
+demo.demoSell(101, 6);
+101: Samsung Galaxy S20 stock level: 5
+Attempt to sell an out of stock item: Samsung Galaxy S20
+101: Samsung Galaxy S20 stock level: 5
+demo.demoSell(107, 10);
+107: Xiaomi Mi 10 stock level: 22
+107: Xiaomi Mi 10 stock level: 12
+demo.demoRename();
+101: Samsung Galaxy S20 stock level: 5
+ 
+Products name was changed to: 
+101: Samsung Galaxy S30 stock level: 5
+demo.demoRemove();
+
+Daniil's Stock List
+====================
+
+101: Samsung Galaxy S30 stock level: 5
+102: Apple iPhone 12 stock level: 23
+103: Google Pixel 4A stock level: 14
+104: Huawei P40 Pro stock level: 12
+105: Honor 10 stock level: 17
+106: Samsung A5 stock level: 1
+107: Xiaomi Mi 10 stock level: 12
+108: Xiaomi RedMi Note stock level: 29
+109: Samsung Galaxy Tab 2 stock level: 34
+110: Apple IPOD stock level: 40
+
+ 
+Product list after removing: 
+
+Daniil's Stock List
+====================
+
+101: Samsung Galaxy S30 stock level: 5
+103: Google Pixel 4A stock level: 14
+104: Huawei P40 Pro stock level: 12
+105: Honor 10 stock level: 17
+106: Samsung A5 stock level: 1
+107: Xiaomi Mi 10 stock level: 12
+108: Xiaomi RedMi Note stock level: 29
+109: Samsung Galaxy Tab 2 stock level: 34
+110: Apple IPOD stock level: 40
+
+demo.demoFindByName();
+
+Daniil's Stock List
+====================
+
+101: Samsung Galaxy S30 stock level: 5
+103: Google Pixel 4A stock level: 14
+104: Huawei P40 Pro stock level: 12
+105: Honor 10 stock level: 17
+106: Samsung A5 stock level: 1
+107: Xiaomi Mi 10 stock level: 12
+108: Xiaomi RedMi Note stock level: 29
+109: Samsung Galaxy Tab 2 stock level: 34
+110: Apple IPOD stock level: 40
+
+
+Products found by name: 
+110: Apple IPOD stock level: 40
+demo.demoLowStock(10);
+101: Samsung Galaxy S30 stock level: 5
+106: Samsung A5 stock level: 1
