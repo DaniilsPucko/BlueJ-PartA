@@ -23,6 +23,13 @@ public class StockDemo
         manager.addProduct(new Product(101, "Samsung Galaxy S20"));
         manager.addProduct(new Product(102, "Apple iPhone 12"));
         manager.addProduct(new Product(103, "Google Pixel 4A"));
+        manager.addProduct(new Product(104, "Huawei P40 Pro"));
+        manager.addProduct(new Product(105, "Honor 10"));
+        manager.addProduct(new Product(106, "Samsung A5"));
+        manager.addProduct(new Product(107, "Xiaomi Mi 10"));
+        manager.addProduct(new Product(108, "Xiaomi RedMi Note"));
+        manager.addProduct(new Product(109, "Samsung Galaxy Tab 2"));
+        manager.addProduct(new Product(110, "Apple IPOD"));
     }
     
     /**
