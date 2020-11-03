@@ -39,6 +39,10 @@ public class StockManager
             {
                 product.rename(name);
             }
+            else
+            {
+                System.out.println("Cannot found product with this ID");
+            }
         }
     }
     
@@ -51,6 +55,10 @@ public class StockManager
             if(product.getID()==id)
             {
                 stock.remove(product);
+            }
+            else
+            {
+                System.out.println("Cannot found product with this ID");
             }
         }
     }
@@ -68,6 +76,10 @@ public class StockManager
             {
                 product.increaseQuantity(amount);
             }
+            else
+            {
+                System.out.println("Cannot found product with this ID");
+            }
         }
     }
     
@@ -83,6 +95,10 @@ public class StockManager
             {
                 return product;
             }
+            else
+            {
+                System.out.println("Cannot found product with this ID");
+            }
         }
         return null;
     }
@@ -96,6 +112,10 @@ public class StockManager
             if(product.getName().contains(name))
             {
                 return product;
+            }
+            else
+            {
+                System.out.println("Cannot found product with this name part");
             }
         }
         
@@ -111,6 +131,10 @@ public class StockManager
             if(product.getQuantity()<=amount)
             {
                 System.out.println(product);
+            }
+            else
+            {
+                System.out.println("All product's stock levels are high.");
             }
         }
     }
@@ -157,6 +181,10 @@ public class StockManager
         {
             System.out.println(product.toString());
         }
+        else
+            {
+                System.out.println("Cannot found product with this ID");
+            }
     }
 
     /**
