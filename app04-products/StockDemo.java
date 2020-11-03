@@ -62,14 +62,14 @@ public class StockDemo
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int id, int amount)
     {
         Product product = getProduct(id);
         
         if(product != null) 
         {
             showDetails(id);
-            product.sellOne();
+            product.sell(amount);
             showDetails(id);
         }
     }
