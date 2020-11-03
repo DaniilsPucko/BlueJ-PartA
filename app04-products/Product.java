@@ -93,4 +93,14 @@ public class Product
                 "Attempt to sell an out of stock item: " + name);
         }
     }
+    
+    /**
+     * Prints info about product.
+     */
+    public void print()
+    {
+        System.out.println("Product ID: " + id);
+        System.out.println("Product name: " + name);
+        System.out.println("Product quantity:" + quantity);
+    }
 }
