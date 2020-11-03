@@ -37,7 +37,12 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
-        
+        for (Product product : stock) {
+            if (product.getID()==id)
+            {
+                product.increaseQuantity(amount);
+            }
+        }
     }
     
     /**
@@ -47,6 +52,12 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+        for (Product product : stock) {
+            if(product.getID()==id)
+            {
+                return product;
+            }
+        }
         return null;
     }
     
@@ -55,14 +66,14 @@ public class StockManager
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
         
         if(product != null) 
         {
             printProduct(id);
-            product.sellOne();
+            product.sell(amount);
             printProduct(id);
         }
     }  
