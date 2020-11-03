@@ -30,6 +30,32 @@ public class StockManager
     }
     
     /**
+     * Rename a product in the list by id.
+     */
+    public void renameProduct(int id, String name)
+    {
+        for(Product product : stock) {
+            if (product.getID()==id)
+            {
+                product.rename(name);
+            }
+        }
+    }
+    
+    /**
+     * Remove a product from the list by id.
+     */
+    public void removeProduct(int id)
+    {
+        for (Product product : stock) {
+            if(product.getID()==id)
+            {
+                stock.remove(product);
+            }
+        }
+    }
+    
+    /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
      * @param id The ID of the product.
