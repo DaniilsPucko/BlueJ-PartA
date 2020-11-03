@@ -91,7 +91,7 @@ public class Product
      */
     public void sell(int amount)
     {
-        if(quantity > 0) 
+        if(quantity > amount) 
         {
             quantity-= amount;
         }
