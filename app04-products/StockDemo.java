@@ -10,13 +10,15 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
+    
 
     /**
      * Create a StockManager and populate it with a few
      * sample products.
      */
-    public StockDemo()
+    public StockDemo(StockManager manager)
     {
+        
         manager = new StockManager();
         manager.addProduct(new Product(132, "Clock Radio"));
         manager.addProduct(new Product(37,  "Mobile Phone"));
