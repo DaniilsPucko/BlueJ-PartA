@@ -88,6 +88,34 @@ public class StockManager
     }
     
     /**
+     * Print a list of product by part of it's name.
+     */
+    public Product findByName(String name)
+    {
+        for (Product product : stock) {
+            if(product.getName().contains(name))
+            {
+                return product;
+            }
+        }
+        
+        return null;
+    }
+    
+    /**
+     * Print a list of products whose stock levels are low.
+     */
+    public void printLowStock(int amount)
+    {
+        for (Product product : stock) {
+            if(product.getQuantity()<=amount)
+            {
+                System.out.println(product);
+            }
+        }
+    }
+    
+    /**
      * Sell one of the given item.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
