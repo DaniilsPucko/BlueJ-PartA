@@ -20,7 +20,10 @@ public class StockApp
     public static final String RE_STOCK = "restock";
     
     // Use to get user input
-    private InputReader input;
+    private InputReader input = new InputReader();
+    
+    private StockManager manager = new StockManager();
+    
     
     /**
      * Constructor for objects of class StockApp
