@@ -106,10 +106,10 @@ public class StockManager
     /**
      * Print a list of products whose stock levels are low.
      */
-    public void printLowStock(int amount)
+    public void printLowStock()
     {
         for (Product product : stock) {
-            if(product.getQuantity()<=amount)
+            if(product.getQuantity()<=5)
             {
                 System.out.println(product);
             }
