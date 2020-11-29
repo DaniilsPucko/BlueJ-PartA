@@ -55,7 +55,8 @@ public class StockApp
             printMenuChoices();
            
             String choice = input.getInput();
-            finished = true;
+            if (choice.equals("quit"))
+                finished = true;
         }
     }
     
