@@ -9,7 +9,7 @@
  */
 public class StockApp
 {
-    public static final String OUIT = "quit";
+    public static final String QUIT = "quit";
     public static final String ADD = "add";
     public static final String PRINT_PRODUCTS = "printproducts";
     public static final String REMOVE = "remove";
@@ -104,6 +104,118 @@ public class StockApp
         }
         System.out.println("Input anything to continue");
         String value = input.getInput();
+    }
+    
+    /**
+     * Added functions for all choices in menu
+     */
+    //Searches for product in stock.
+    private void printMatchingProduct()
+    {
+        System.out.println("Search for products");
+        
+        System.out.println("Please enter String");
+        String name = input.getInput();
+        
+        manager.findByName(name);
+        
+    }
+    
+    //Restocks products.
+    private void ReStock()
+    {
+        System.out.println("Re-stock products");
+        
+        manager.ReStock();
+        manager.printAllProducts();
+        
+        
+    }
+    
+    //Sells product.
+    private void sellProduct()
+    {
+        System.out.println("Selling product...");
+        
+        System.out.println("Please enter the product ID");
+        String value = input.getInput();
+        int id = Integer.parseInt(value);
+        String value2 = input.getInput();
+        int amount = Integer.parseInt(value2);
+        manager.sellProduct(id,amount);
+        Product product = manager.findProduct(id);
+        
+        System.out.println("Product: " + product + "was sold");
+        System.out.println();
+    }
+    
+    //Prints info about products whose stock level are less than 5
+    private void printLowStockdetails()
+    {
+        System.out.println("Low stock for products");
+        
+        manager.printLowStock();
+       
+    }
+    
+    //Adds product to stock list.
+    private void addProduct()
+    {
+        System.out.println("Adding new product");
+        System.out.println("\n");
+        
+        System.out.println("Please enter the product ID");
+        String value = input.getInput();
+        int id = Integer.parseInt(value);
+        
+        System.out.println("Please enter name of the product");
+        String name = input.getInput();
+        Product product = new Product(id, name);
+        manager.addProduct(product);
+        
+        System.out.println("\n");
+        System.out.println(" You have addded " + product);
+        System.out.println();
+    }
+    
+    //Delivers products.
+    private void deliverProduct()
+    {
+        System.out.println("Deliver new product");
+        System.out.println("\n");
+        
+        System.out.println("Please enter the product ID");
+        String value = input.getInput();
+        int id = Integer.parseInt(value);
+        
+        System.out.println("Please enter the amount");
+        value = input.getInput();
+        int amount = Integer.parseInt(value);
+        manager.delivery(id, amount);
+        Product product = manager.findProduct(id);
+        
+        System.out.println("\n");
+        System.out.println("You have delivered " + product);
+        System.out.println();
+    }
+    
+    //Removes product from stock list.
+    private void removeProduct()
+    {
+        System.out.println("Remove product");
+        System.out.println("\n");
+        
+        System.out.println("Please enter the product ID");
+        String value = input.getInput();
+        int id = Integer.parseInt(value);
+        
+        Product product = manager.findProduct(id);
+        
+        manager.removeProduct(id);
+        
+        System.out.println("\n");
+        System.out.println("You have removed " + product);
+        System.out.println();
     }
 
     /**
