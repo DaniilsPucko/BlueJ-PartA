@@ -224,15 +224,15 @@ public class StockApp
     private void printMenuChoices()
     {
         System.out.println();
-        System.out.println("    Add:        Add a new product");
-        System.out.println("    Remove:     Remove an old product");
-        System.out.println("    PrintAll:   Print all products");
-        System.out.println("    Quit:       Quit the program");
-        System.out.println("    Deliver     Delivers products");
-        System.out.println("    Search      Searches products");
-        System.out.println("    Low stock   Low stock in products");
-        System.out.println("    Re-stock    Re-stock in products");
-        System.out.println("    Sell        Sell products");
+        System.out.println("    Add:         Add a new product");
+        System.out.println("    Remove:      Remove an old product");
+        System.out.println("    PrintAll:    Print all products");
+        System.out.println("    Quit:        Quit the program");
+        System.out.println("    Deliver:     Delivers products");
+        System.out.println("    Search:      Searches products");
+        System.out.println("    Low stock:   Low stock in products");
+        System.out.println("    Re-stock:    Re-stock in products");
+        System.out.println("    Sell:        Sell products");
         System.out.println();        
     }
     
