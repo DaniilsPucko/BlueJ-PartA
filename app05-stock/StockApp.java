@@ -162,7 +162,7 @@ public class StockApp
     private void addProduct()
     {
         System.out.println("Adding new product");
-        System.out.println("\n");
+        System.out.println();
         
         System.out.println("Please enter the product ID");
         String value = input.getInput();
@@ -173,7 +173,7 @@ public class StockApp
         Product product = new Product(id, name);
         manager.addProduct(product);
         
-        System.out.println("\n");
+        System.out.println();
         System.out.println(" You have addded " + product);
         System.out.println();
     }
@@ -182,7 +182,7 @@ public class StockApp
     private void deliverProduct()
     {
         System.out.println("Deliver new product");
-        System.out.println("\n");
+        System.out.println();
         
         System.out.println("Please enter the product ID");
         String value = input.getInput();
@@ -194,7 +194,7 @@ public class StockApp
         manager.delivery(id, amount);
         Product product = manager.findProduct(id);
         
-        System.out.println("\n");
+        System.out.println();
         System.out.println("You have delivered " + product);
         System.out.println();
     }
@@ -203,7 +203,7 @@ public class StockApp
     private void removeProduct()
     {
         System.out.println("Remove product");
-        System.out.println("\n");
+        System.out.println();
         
         System.out.println("Please enter the product ID");
         String value = input.getInput();
@@ -213,7 +213,7 @@ public class StockApp
         
         manager.removeProduct(id);
         
-        System.out.println("\n");
+        System.out.println();
         System.out.println("You have removed " + product);
         System.out.println();
     }
