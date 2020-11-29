@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class StockManager
 {
     // A list of the products.
-    private ArrayList<Product> stock;
+    public ArrayList<Product> stock;
 
     /**
      * Initialise the stock manager.
