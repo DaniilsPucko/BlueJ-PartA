@@ -9,6 +9,16 @@
  */
 public class StockApp
 {
+    public static final String OUIT = "quit";
+    public static final String ADD = "add";
+    public static final String PRINT_PRODUCTS = "printproducts";
+    public static final String REMOVE = "remove";
+    public static final String DELIVER = "deliver";
+    public static final String SELL = "sell";
+    public static final String SEARCH = "search";
+    public static final String LOW_STOCK = "lowstock";
+    public static final String RE_STOCK = "restock";
+    
     // Use to get user input
     private InputReader input;
     
@@ -67,7 +77,7 @@ public class StockApp
     {
         System.out.println("******************************");
         System.out.println(" Stock Management Application ");
-        System.out.println("    App05: by Student Name");
+        System.out.println("    App05: by Daniils Pucko");
         System.out.println("******************************");
     }
 }
