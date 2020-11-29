@@ -69,6 +69,41 @@ public class StockApp
      */
     private void startChoiceMenu(String choice)
     {
+                if(choice.equals(ADD))
+        {
+            addProduct();
+        }
+        else if(choice.equals(REMOVE))
+        {
+            removeProduct();
+        }
+        
+        else if(choice.equals(PRINT_PRODUCTS))
+        {
+            manager.printAllProducts();
+        }
+        else if(choice.equals(DELIVER))
+        {
+            deliverProduct();
+        }
+        else if(choice.equals(SELL))
+        {
+            sellProduct();
+        }
+        else if(choice.equals(SEARCH))
+        {
+            printMatchingProduct();
+        }
+        else if(choice.equals(LOW_STOCK))
+        {
+            printLowStockdetails();
+        }
+        else if(choice.equals(RE_STOCK))
+        {
+            ReStock();
+        }
+        System.out.println("Input anything to continue");
+        String value = input.getInput();
     }
 
     /**
