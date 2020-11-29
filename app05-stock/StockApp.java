@@ -43,7 +43,7 @@ public class StockApp
     }
     
     /**
-     * 
+     * Checks choice to start or quit program.
      */
     public void getMenuChoice()
     {
@@ -55,12 +55,22 @@ public class StockApp
             printMenuChoices();
            
             String choice = input.getInput();
-            if (choice.equals("quit"))
+            if (choice.equals("quit")){
                 finished = true;
+            }
+            else {
+                startChoiceMenu(choice);
+            }
         }
     }
-    
-   
+
+    /**
+     * Executes program that is written by user.
+     */
+    private void startChoiceMenu(String choice)
+    {
+    }
+
     /**
      * Print out a menu of operation choices
      */
