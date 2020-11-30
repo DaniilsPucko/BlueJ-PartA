@@ -181,7 +181,6 @@ public class StockApp
         {
         manager.addProduct(product);
         }
-        
         System.out.println();
         System.out.println(" You have addded " + product);
         System.out.println();
@@ -200,12 +199,17 @@ public class StockApp
         System.out.println("Please enter the amount");
         value = input.getInput();
         int amount = Integer.parseInt(value);
+        if (amount<=0){
+            System.out.println("Cannot deliver a negative amount of products");
+        }
+        else
+        {
         manager.delivery(id, amount);
         Product product = manager.findProduct(id);
-        
         System.out.println();
         System.out.println("You have delivered " + product);
         System.out.println();
+        }
     }
     
     //Removes product from stock list.
@@ -219,12 +223,16 @@ public class StockApp
         int id = Integer.parseInt(value);
         
         Product product = manager.findProduct(id);
-        
+        if (product == null){
+            System.out.println("Cannot find a product with given ID");
+        }
+        else
+        {
         manager.removeProduct(id);
-        
         System.out.println();
         System.out.println("You have removed " + product);
         System.out.println();
+        }
     }
 
     /**
