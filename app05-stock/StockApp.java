@@ -184,7 +184,7 @@ public class StockApp
             System.out.println("Please enter name of the product");
             String name = input.getInput();
             Product product = new Product(id, name);
-            if (product.name ==""){
+            if (name.length() == 0){
                 System.out.println("You cannot add a product without name.");
                 System.out.println("Input anything to continue");
                 String value1 = input.getInput();
