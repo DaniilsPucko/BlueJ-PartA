@@ -1,0 +1,193 @@
+Program.main();
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 111
+Please enter name of the product
+> Samsung Galaxy S10
+
+ You have addded 111: Samsung Galaxy S10 stock level: 0
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 112
+Please enter name of the product
+> Samsung Galaxy S20
+
+ You have addded 112: Samsung Galaxy S20 stock level: 0
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 113
+Please enter name of the product
+> Apple iPhone 11
+
+ You have addded 113: Apple iPhone 11 stock level: 0
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 114
+Please enter name of the product
+> Apple iPhone 12
+
+ You have addded 114: Apple iPhone 12 stock level: 0
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 115
+Please enter name of the product
+> Motorola G9 Plus
+
+ You have addded 115: Motorola G9 Plus stock level: 0
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 113
+Product with given ID already exists
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> add
+Adding new product
+
+Please enter the product ID
+> 116
+Please enter name of the product
+> 
+You cannot add a product without name.
+Input anything to continue
+> .
+
+ You have addded 116:  stock level: 0
+
+Input anything to continue
+> 
