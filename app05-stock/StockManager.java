@@ -26,17 +26,7 @@ public class StockManager
      */
     public void addProduct(Product item)
     {
-        int id = item.getID();
-        for(Product product : stock) {
-            if (product.getID()==id)
-            {
-                System.out.println("Cannot add product, because product with same ID exists.");
-            }
-            else
-            {
-                stock.add(item);
-            }
-        }
+        stock.add(item);
     }
     
     /**
