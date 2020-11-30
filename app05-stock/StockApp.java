@@ -173,22 +173,30 @@ public class StockApp
         System.out.println("Please enter the product ID");
         String value = input.getInput();
         int id = Integer.parseInt(value);
+        Product item = new Product(id, "");
         
-        System.out.println("Please enter name of the product");
-        String name = input.getInput();
-        Product product = new Product(id, name);
-        if (product.name ==""){
-            System.out.println("You cannot add a product without name.");
-            System.out.println("Input anything to continue");
-            String value1 = input.getInput();
+        item = manager.findProduct(id);
+        if (item != null){
+            System.out.println("Product with given ID already exists");
         }
         else
         {
-        manager.addProduct(product);
+            System.out.println("Please enter name of the product");
+            String name = input.getInput();
+            Product product = new Product(id, name);
+            if (product.name ==""){
+                System.out.println("You cannot add a product without name.");
+                System.out.println("Input anything to continue");
+                String value1 = input.getInput();
+            }
+            else
+            {
+                manager.addProduct(product);
+            }
+            System.out.println();
+            System.out.println(" You have addded " + product);
+            System.out.println();
         }
-        System.out.println();
-        System.out.println(" You have addded " + product);
-        System.out.println();
     }
     
     //Delivers products.
