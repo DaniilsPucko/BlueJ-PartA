@@ -143,11 +143,16 @@ public class StockApp
         int id = Integer.parseInt(value);
         String value2 = input.getInput();
         int amount = Integer.parseInt(value2);
+        if (amount <=0){
+            System.out.println("Cannot sell negative amount of products.");
+        }
+        else
+        {
         manager.sellProduct(id,amount);
         Product product = manager.findProduct(id);
-        
         System.out.println("Product: " + product + "was sold");
         System.out.println();
+        }
     }
     
     //Prints info about products whose stock level are less than 5
