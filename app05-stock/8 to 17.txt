@@ -1,0 +1,201 @@
+
+
+> printproducts
+
+Daniil's Stock List
+====================
+
+111: Samsung Galaxy S10 stock level: 0
+112: Samsung Galaxy S20 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Motorola G9 Plus stock level: 0
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> deliver
+Deliver new product
+
+Please enter the product ID
+> 112
+Please enter the amount
+> 8
+
+You have delivered 112: Samsung Galaxy S20 stock level: 8
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> deliver
+Deliver new product
+
+Please enter the product ID
+> 112
+Please enter the amount
+> -4
+Cannot deliver a negative amount of products
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> sell
+Selling product...
+Please enter the product ID
+> 112
+> 2
+112: Samsung Galaxy S20 stock level: 8
+112: Samsung Galaxy S20 stock level: 6
+Product: 112: Samsung Galaxy S20 stock level: was sold
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> sell
+Selling product...
+Please enter the product ID
+> 112
+> 10
+112: Samsung Galaxy S20 stock level: 6
+Attempt to sell an out of stock item: Samsung Galaxy S20
+112: Samsung Galaxy S20 stock level: 6
+Product: 112: Samsung Galaxy S20 stock level: was sold
+
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> sell
+Selling product...
+Please enter the product ID
+> 112
+> -2
+Cannot sell negative amount of products.
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> search
+Search for products
+Please enter String
+> Samsung
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> lowstock
+Low stock for products
+111: Samsung Galaxy S10 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Motorola G9 Plus stock level: 0
+Input anything to continue
+> .
+******************************
+ Stock Management Application 
+    App05: by Daniils Pucko
+******************************
+
+    Add:              Add a new product
+    Remove:           Remove an old product
+    printproducts:    Print all products
+    Quit:             Quit the program
+    Deliver:          Delivers products
+    Search:           Searches for products
+    Low stock:        Shows low stock products
+    Re-stock:         Re-stocks products
+    Sell:             Sells products
+
+> 
