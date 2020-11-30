@@ -57,6 +57,7 @@ public class StockManager
      */
     public void removeProduct(int id)
     {
+        
         for (Product product : stock) {
             if(product.getID()==id)
             {
