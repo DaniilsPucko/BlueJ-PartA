@@ -71,6 +71,7 @@ public class StockApp
     {
                 if(choice.equals(ADD))
         {
+            
             addProduct();
         }
         else if(choice.equals(REMOVE))
