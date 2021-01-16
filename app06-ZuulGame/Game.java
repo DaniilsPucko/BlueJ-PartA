@@ -80,20 +80,24 @@ public class Game
      *  Main play routine.  Loops until end of play.
      */
     public void play() 
-    {            
+        {            
         printWelcome();
                 
-        boolean playing =true;
+        boolean finished = false;
         
-        while (playing) 
+        while (finished = false) 
         {
             currentRoom.printRoom();
             System.out.println("You have: ");
             player.printItems();
             Command command = parser.getCommand();
-    
-            
-        }
+            if(command.equals("quit")){
+                finished = true;
+            }
+            else {
+                processCommand(command);
+            }
+       }
         
         System.out.println("Thank you for playing.  Good bye.");
     }
@@ -139,9 +143,12 @@ public class Game
             case QUIT:
                 wantToQuit = quit(command);
                 break;
-             
+            
             case TAKE:
-                room.takeItem();
+                String name = null;
+                String item = name;
+                currentRoom.takeItem(item);
+                break;
         }
         return wantToQuit;
     }
