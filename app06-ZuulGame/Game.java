@@ -36,7 +36,7 @@ public class Game
     /**
      * Create all the rooms and link their exits together.
      */
-    private void createRooms()
+    public void createRooms()
     {
         Room outside, theater, pub, lab, office, shop, warehouse, backyard;
       
@@ -81,8 +81,7 @@ public class Game
      */
     public void play() 
         {            
-        printWelcome();
-                
+        printWelcome();        
         boolean finished = false;
         
         while (finished = true) 
@@ -91,12 +90,8 @@ public class Game
             System.out.println("You have: ");
             player.printItems();
             Command command = parser.getCommand();
-            if(command.equals("quit")){
-                finished = true;
-            }
-            else {
-                processCommand(command);
-            }
+            processCommand(command);
+            
        }
         
         System.out.println("Thank you for playing.  Good bye.");
