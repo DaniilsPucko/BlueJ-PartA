@@ -9,25 +9,17 @@ public enum CommandWord
 {
     // A value for each command word along with its
     // corresponding user interface string.
-    GO("go"), QUIT("quit"), HELP("help"), UNKNOWN("?");
+    Go(1), Drop(2), Give(3), Take(4), Quit(5);
     
-    // The command string.
-    private String commandString;
+    private final int id;
     
-    /**
-     * Initialise with the corresponding command string.
-     * @param commandString The command string.
-     */
-    CommandWord(String commandString)
+    private CommandWord(int id)
+        {
+            this.id = id;
+        }
+        
+    public int getValue()
     {
-        this.commandString = commandString;
-    }
-    
-    /**
-     * @return The command word as a string.
-     */
-    public String toString()
-    {
-        return commandString;
+        return id;
     }
 }
