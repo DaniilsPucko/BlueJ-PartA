@@ -139,6 +139,9 @@ public class Game
             case QUIT:
                 wantToQuit = quit(command);
                 break;
+             
+            case TAKE:
+                room.takeItem();
         }
         return wantToQuit;
     }
