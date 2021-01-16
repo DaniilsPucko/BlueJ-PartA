@@ -83,12 +83,16 @@ public class Game
     {            
         printWelcome();
                 
-        boolean finished = false;
+        boolean playing =true;
         
-        while (! finished) 
+        while (playing) 
         {
+            currentRoom.printRoom();
+            System.out.println("You have: ");
+            player.printItems();
             Command command = parser.getCommand();
-            finished = processCommand(command);
+    
+            
         }
         
         System.out.println("Thank you for playing.  Good bye.");
