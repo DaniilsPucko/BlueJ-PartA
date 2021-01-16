@@ -9,7 +9,7 @@ public enum CommandWord
 {
     // A value for each command word along with its
     // corresponding user interface string.
-    Go(1), Drop(2), Give(3), Take(4), Quit(5);
+    Go(1), Drop(2), Give(3), Take(4), Quit(5), Unknown(6), Help(7);
     
     private final int id;
     
