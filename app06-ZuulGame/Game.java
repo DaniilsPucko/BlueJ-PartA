@@ -14,7 +14,8 @@
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
  * 
- * Modified and extended by Student Name
+ * @Modified and extended by Daniils Pucko
+ * @version 2021.01.16
  */
 
 public class Game 
@@ -36,19 +37,23 @@ public class Game
      */
     private void createRooms()
     {
-        Room outside, theater, pub, lab, office;
+        Room outside, theater, pub, lab, office, shop, warehouse, backyard;
       
         // create the rooms
-        outside = new Room("outside the main entrance of the university");
-        theater = new Room("in a lecture theater");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
+        outside = new Room("in the centre of abandonned city");
+        theater = new Room("in the destroyed theater building");
+        pub = new Room("in the burned pub");
+        lab = new Room("in a lab, where virus was made");
+        office = new Room("in the main office of DeathInc");
+        shop = new Room("in the small shop");
+        warehouse = new Room("in the shop warehouse");
+        backyard = new Room("on shop's backyard");
         
         // initialise room exits
         outside.setExit("east", theater);
         outside.setExit("south", lab);
         outside.setExit("west", pub);
+        outside.setExit("north", shop);
 
         theater.setExit("west", outside);
 
@@ -58,6 +63,14 @@ public class Game
         lab.setExit("east", office);
 
         office.setExit("west", lab);
+        
+        shop.setExit("east", warehouse);
+        shop.setExit("west", backyard);
+        shop.setExit("south", outside);
+        
+        warehouse.setExit("west", shop);
+        
+        backyard.setExit("east", shop);
 
         currentRoom = outside;  // start game outside
     }
