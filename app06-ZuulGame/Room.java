@@ -129,6 +129,18 @@ public class Room
             item.printItem();
         }
     }
+    
+    /**
+     * Prints all info about the room.
+     */
+    public void printRoom()
+    {
+        this.getLongDescription();
+        System.out.println("You can move to: ");
+        this.getExitString();
+        System.out.println("In this room there are: ");
+        this.printItems();
+    }
    
 }
 
