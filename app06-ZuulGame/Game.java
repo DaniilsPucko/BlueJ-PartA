@@ -30,6 +30,7 @@ public class Game
     {
         createRooms();
         parser = new Parser();
+        player = new Player("Reporter Mike");
     }
 
     /**
