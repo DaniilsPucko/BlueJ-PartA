@@ -91,7 +91,6 @@ public class Game
             player.printItems();
             Command command = parser.getCommand();
             processCommand(command);
-            
        }
         
         System.out.println("Thank you for playing.  Good bye.");
