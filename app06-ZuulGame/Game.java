@@ -102,7 +102,7 @@ public class Game
         System.out.println();
         System.out.println("Welcome to the World of Zuul!");
         System.out.println("World of Zuul is a new, incredibly boring adventure game.");
-        System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
+        System.out.println("Type '" + CommandWord.Help + "' if you need help.");
         System.out.println();
         System.out.println(currentRoom.getLongDescription());
     }
@@ -120,19 +120,19 @@ public class Game
 
         switch (commandWord) 
         {
-            case UNKNOWN:
+            case Unknown:
                 System.out.println("I don't know what you mean...");
                 break;
 
-            case HELP:
+            case Help:
                 printHelp();
                 break;
 
-            case GO:
+            case Go:
                 goRoom(command);
                 break;
 
-            case QUIT:
+            case Quit:
                 wantToQuit = quit(command);
                 break;
         }
