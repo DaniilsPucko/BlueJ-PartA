@@ -54,14 +54,6 @@ public class Command
     }
 
     /**
-     * @return true if this command was not understood.
-     */
-    public boolean isUnknown()
-    {
-        return (commandWord == CommandWord.UNKNOWN);
-    }
-
-    /**
      * @return true if the command has a second word.
      */
     public boolean hasSecondWord()
