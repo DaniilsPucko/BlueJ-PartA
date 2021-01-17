@@ -26,7 +26,7 @@ public class LabClass
     public LabClass(int maxNumberOfStudents)
     {
         instructor = "unknown";
-        room = "unknown";
+        room = "unknown1";
         timeAndDay = "unknown";
         
         students = new ArrayList<Student>();
