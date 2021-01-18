@@ -1,3 +1,4 @@
+
 /**
  *  This class is the main class of the "World of Zuul" application. 
  *  "World of Zuul" is a very simple, text based adventure game.  Users 
@@ -32,69 +33,89 @@ public class Game
         location = new Locations();
         parser = new Parser();
         player = new Player("Reporter Mike");
-        currentRoom = location.start();
+        currentRoom = location.startingRoom();
     }
-
+    
     /**
-     * Create all the rooms and link their exits together.
+     * Starts the game and does not end until player will say quit.
      */
-    private void createRooms()
+    public void play()
     {
-        Room outside, theater, pub, lab, office;
-      
-        // create the rooms
-        outside = new Room("outside the main entrance of the university");
-        theater = new Room("in a lecture theater");
-        pub = new Room("in the campus pub");
-        lab = new Room("in a computing lab");
-        office = new Room("in the computing admin office");
-        
-        // initialise room exits
-        outside.setExit("east", theater);
-        outside.setExit("south", lab);
-        outside.setExit("west", pub);
-
-        theater.setExit("west", outside);
-
-        pub.setExit("east", outside);
-
-        lab.setExit("north", outside);
-        lab.setExit("east", office);
-
-        office.setExit("west", lab);
-
-        currentRoom = outside;  // start game outside
-    }
-
-    /**
-     *  Main play routine.  Loops until end of play.
-     */
-    public void play() 
-    {            
         printWelcome();
-
-        // Enter the main command loop.  Here we repeatedly read commands and
-        // execute them until the game is over.
-                
-        boolean finished = false;
-      
-        System.out.println("Thank you for playing.  Good bye.");
+        boolean playing = true;
+        while(playing){
+            currentRoom.printRoom();
+            System.out.println("In your inventory you have: ");
+            player.printItems();
+            String[] command1 = parser.getCommand();
+            if (command1[0].equalsIgnoreCase("quit")){
+                playing = false;
+            }
+            else
+            {
+                this.update(command1, player, currentRoom);
+            }
+        }
     }
+    
+    /**
+     * Updates current player status.
+     */
+    public void update(String[] command1, Player p1, Room location1)
+    {
+        if (command1[0].equalsIgnoreCase("go"))
+        {
+            if (command1.length > 1)
+            {
+                int id = location1.getExit(command1[1]);
+                if (id == -1) 
+                {
+                    System.out.println("Exit is locked, try to find something to open it.");
+                }
+                else
+                {
+                    System.out.println("You can go this way");
+                    currentRoom = location.getLocation(id);
+                }
+            }
+            else 
+            {
+                System.out.println("You still have not typed where you want to go?");
+            }
+        }
+        else if (command1[0].equalsIgnoreCase("take"))
+        {
+            if (command1.length > 1) 
+            {
+                Items item = location1.takeItem(command1[1]);
+                if (item == null) 
+                {
+                    System.out.println("No such item in this room");
+                }
+                else 
+                {
+                System.out.println("The" + item + " has been taken");
+                player.addItem(item);
+                }
+            }
+            else 
+            {
+            System.out.println("You have not said what to take");
+            }
+        }
+    }   
 
     /**
      * Print out the opening message for the player.
      */
     private void printWelcome()
     {
-        System.out.println();
-        System.out.println("Welcome to the World of Zuul!");
-        System.out.println("World of Zuul is a new, incredibly boring adventure game.");
-        System.out.println("Type '" + CommandWord.Help + "' if you need help.");
-        System.out.println();
-        System.out.println(currentRoom.getLongDescription());
+        System.out.println("----Death Inc : Beginning ----");
+        System.out.println("You are playing as Reporter Mike.");
+        System.out.println("Corporation Death Inc invented deadly virus and spreaded it across the world");
+        System.out.println("Your task is to find documentation, to prove that they are guilty");
+        System.out.println("To do this, you went to abandonned city, where all this started");
+        System.out.println("Good luck!");
+        System.out.println("-------------------------------");
     }
-
-
-
-
 }
