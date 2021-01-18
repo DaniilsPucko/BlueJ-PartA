@@ -1,6 +1,4 @@
-import java.util.Set;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.ArrayList;
 
 /**
  * Class Room - a room in an adventure game.
@@ -19,29 +17,26 @@ import java.util.Iterator;
 public class Room 
 {
     private String description;
-    private HashMap<String, Room> exits;        // stores exits of this room.
-
+    private String name;
+    private int id;
+    private ArrayList<Exit> exits;
+    private ArrayList<Items> items;
+    
     /**
      * Create a room described "description". Initially, it has
      * no exits. "description" is something like "a kitchen" or
      * "an open court yard".
      * @param description The room's description.
      */
-    public Room(String description) 
+    public Room(int number, String title, String description) 
     {
+        name = title;
+        id = number;
         this.description = description;
-        exits = new HashMap<>();
+        exits = new ArrayList<>();
+        items = new ArrayList<>();
     }
 
-    /**
-     * Define an exit from this room.
-     * @param direction The direction of the exit.
-     * @param neighbor  The room to which the exit leads.
-     */
-    public void setExit(String direction, Room neighbor) 
-    {
-        exits.put(direction, neighbor);
-    }
 
     /**
      * @return The short description of the room
