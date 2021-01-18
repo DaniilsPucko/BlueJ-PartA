@@ -1,7 +1,6 @@
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.ArrayList;
 
 /**
  * Class Room - a room in an adventure game.
@@ -15,16 +14,12 @@ import java.util.ArrayList;
  * 
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
- * 
- * @modified by Daniils Pucko
- * @version 16.01.2021
  */
 
 public class Room 
 {
     private String description;
     private HashMap<String, Room> exits;        // stores exits of this room.
-    private ArrayList<Items> items;
 
     /**
      * Create a room described "description". Initially, it has
@@ -36,7 +31,6 @@ public class Room
     {
         this.description = description;
         exits = new HashMap<>();
-        items = new ArrayList<>();
     }
 
     /**
@@ -81,7 +75,7 @@ public class Room
         
         for(String exit : keys) 
         {
-            returnString += ", " + exit;
+            returnString += " " + exit;
         }
         return returnString;
     }
@@ -96,51 +90,5 @@ public class Room
     {
         return exits.get(direction);
     }
-    
-    /**
-     * Adds item to the room.
-     */
-    public void setItem(String name, String description)
-    {
-        Items item = new Items(name, description);
-        items.add(item);
-    }
-    
-    /**
-     * Takes item from the room.
-     */
-    public Items takeItem(String name)
-    {
-        for(Items item : items){
-            if (item.getName().contains(name)){
-                items.remove(item);
-                return item;
-            }
-        }
-        return null;
-    }
-    
-    /**
-     * Prints items which are in the room.
-     */
-    public void printItems()
-    {
-        for(Items item : items){
-            item.printItem();
-        }
-    }
-    
-    /**
-     * Prints all info about the room.
-     */
-    public void printRoom()
-    {
-        this.getLongDescription();
-        System.out.println("You can move to: ");
-        this.getExitString();
-        System.out.println("In this room there are: ");
-        this.printItems();
-    }
-   
 }
 

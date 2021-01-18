@@ -14,15 +14,14 @@
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
  * 
- * @Modified and extended by Daniils Pucko
- * @version 2021.01.16
+ * Modified and extended by Student Name
  */
 
 public class Game 
 {
     private Parser parser;
     private Room currentRoom;
-    private Player player;    
+        
     /**
      * Create the game and initialise its internal map.
      */
@@ -30,31 +29,26 @@ public class Game
     {
         createRooms();
         parser = new Parser();
-        player = new Player("Reporter Mike");
     }
 
     /**
      * Create all the rooms and link their exits together.
      */
-    public void createRooms()
+    private void createRooms()
     {
-        Room outside, theater, pub, lab, office, shop, warehouse, backyard;
+        Room outside, theater, pub, lab, office;
       
         // create the rooms
-        outside = new Room("in the centre of abandonned city");
-        theater = new Room("in the destroyed theater building");
-        pub = new Room("in the burned pub");
-        lab = new Room("in a lab, where virus was made");
-        office = new Room("in the main office of DeathInc");
-        shop = new Room("in the small shop");
-        warehouse = new Room("in the shop warehouse");
-        backyard = new Room("on shop's backyard");
+        outside = new Room("outside the main entrance of the university");
+        theater = new Room("in a lecture theater");
+        pub = new Room("in the campus pub");
+        lab = new Room("in a computing lab");
+        office = new Room("in the computing admin office");
         
         // initialise room exits
         outside.setExit("east", theater);
         outside.setExit("south", lab);
         outside.setExit("west", pub);
-        outside.setExit("north", shop);
 
         theater.setExit("west", outside);
 
@@ -64,14 +58,6 @@ public class Game
         lab.setExit("east", office);
 
         office.setExit("west", lab);
-        
-        shop.setExit("east", warehouse);
-        shop.setExit("west", backyard);
-        shop.setExit("south", outside);
-        
-        warehouse.setExit("west", shop);
-        
-        backyard.setExit("east", shop);
 
         currentRoom = outside;  // start game outside
     }
@@ -80,18 +66,19 @@ public class Game
      *  Main play routine.  Loops until end of play.
      */
     public void play() 
-        {            
-        printWelcome();        
+    {            
+        printWelcome();
+
+        // Enter the main command loop.  Here we repeatedly read commands and
+        // execute them until the game is over.
+                
         boolean finished = false;
         
-        while (!finished) 
+        while (! finished) 
         {
-            currentRoom.printRoom();
-            System.out.println("You have: ");
-            player.printItems();
             Command command = parser.getCommand();
-            processCommand(command);
-       }
+            finished = processCommand(command);
+        }
         
         System.out.println("Thank you for playing.  Good bye.");
     }
@@ -106,7 +93,7 @@ public class Game
         System.out.println("World of Zuul is a new, incredibly boring adventure game.");
         System.out.println("Type '" + CommandWord.HELP + "' if you need help.");
         System.out.println();
-        currentRoom.printRoom();
+        System.out.println(currentRoom.getLongDescription());
     }
 
     /**
@@ -136,12 +123,6 @@ public class Game
 
             case QUIT:
                 wantToQuit = quit(command);
-                break;
-            
-            case TAKE:
-                String name = null;
-                String item = name;
-                currentRoom.takeItem(item);
                 break;
         }
         return wantToQuit;
