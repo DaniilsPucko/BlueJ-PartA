@@ -147,6 +147,14 @@ public class Game
             System.out.println("You have not said what to take");
             }
         }
+        else if (command1[0].equalsIgnoreCase("help"))
+        {
+            System.out.println("List of commands: ");
+            System.out.println("1. Go - type go [Where].");
+            System.out.println("2. Take - type take [What].");
+            System.out.println("3. Help - prints all available commands.");
+            System.out.println("4. Quit - stop the game and exit. Progress will not be saved.");
+        }
     }   
 
     /**
