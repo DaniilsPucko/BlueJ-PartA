@@ -22,7 +22,7 @@ public class Exit
     /**
      * Prints id of an exit.
      */
-    public int getID()
+    public int getId()
     {
         return id;
     }
