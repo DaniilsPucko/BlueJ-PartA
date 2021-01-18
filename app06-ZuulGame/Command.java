@@ -58,7 +58,7 @@ public class Command
      */
     public boolean isUnknown()
     {
-        return (commandWord == CommandWord.UNKNOWN);
+        return (commandWord == CommandWord.Unknown);
     }
 
     /**

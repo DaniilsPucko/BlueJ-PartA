@@ -26,7 +26,7 @@ public class CommandWords
         
         for(CommandWord command : CommandWord.values()) 
         {
-            if(command != CommandWord.UNKNOWN) 
+            if(command != CommandWord.Unknown) 
             {
                 validCommands.put(command.toString(), command);
             }
@@ -49,7 +49,7 @@ public class CommandWords
         }
         else 
         {
-            return CommandWord.UNKNOWN;
+            return CommandWord.Unknown;
         }
     }
     
