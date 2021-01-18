@@ -7,16 +7,15 @@
  */
 public class Exit
 {
-    private int id;
-    private String roads;
-
+    public String roads;
+    public int id;
     /**
      * Constructor for objects of class Exit
      */
-    public Exit(int number, String road)
+    public Exit(String road, int number)
     {
-        id = number;
         roads = road;
+        id = number;
     }
 
     /**
