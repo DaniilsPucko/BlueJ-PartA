@@ -56,6 +56,13 @@ public class Game
             {
                 this.update(command1, player, currentRoom);
             }
+            String name = "Documentation";
+            if(player.findItem(name) == true) {
+                System.out.println("Congratulations!");
+                System.out.println("You have found documentation.");
+                System.out.println("Now everyone will know, what is the reason of all deaths");
+                playing = false;        
+            } 
         }
     }
     
@@ -92,13 +99,6 @@ public class Game
                     if (p1.findItem(name) == true) {
                         currentRoom = location.getLocation(id);
                         System.out.println("You have swiped a card and entered a room");
-                        name = "Documentation";
-                        if(p1.findItem(name) == true) {
-                            System.out.println("Congratulations!");
-                            System.out.println("You have found documentation.");
-                            System.out.println("Now everyone will know, what is the reason of all deaths");
-                            boolean playing = false;
-                        }
                     }
                     else
                     {
@@ -108,8 +108,8 @@ public class Game
                 else if (id == 2)
                 {
                     System.out.println("You can go this way");
-                    p1.affectHealth(-20);
-                    p1.printPlayer();
+                    currentRoom = location.getLocation(id);
+                    p1.affectHealth(-20);;
                 }
                 else
                 {
@@ -135,7 +135,6 @@ public class Game
                 else if (item.getName().contains("Energy Drink"))
                 {
                     p1.affectHealth(+20);
-                    p1.printPlayer();
                 }
                 else
                 {
