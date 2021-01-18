@@ -36,54 +36,110 @@ public class Room
         exits = new ArrayList<>();
         items = new ArrayList<>();
     }
-
+    
+    /**
+     * Prints id of a room.
+     */
+    public int getId()
+    {
+        return id;
+    }
+    
+    /**
+     * Prints name of the room
+     */
+    public String getName()
+    {
+        return name;
+    }
 
     /**
-     * @return The short description of the room
+     * @return description of the room
      * (the one that was defined in the constructor).
      */
-    public String getShortDescription()
+    public String getDescription()
     {
         return description;
     }
-
+    
     /**
-     * Return a description of the room in the form:
-     *     You are in the kitchen.
-     *     Exits: north west
-     * @return A long description of this room
+     * Sets exits of the room.
      */
-    public String getLongDescription()
+    public void setExit(String road, int id)
     {
-        return "You are " + description + ".\n" + getExitString();
+        Exit exit = new Exit(id, road);
+        exits.add(exit);
     }
-
+    
     /**
-     * Return a string describing the room's exits, for example
-     * "Exits: north west".
-     * @return Details of the room's exits.
+     * Prints exits id.
      */
-    private String getExitString()
+    public int getExit(String road)
     {
-        String returnString = "Exits:";
-        Set<String> keys = exits.keySet();
-        
-        for(String exit : keys) 
-        {
-            returnString += " " + exit;
+        for (Exit exit : exits) {
+            if (exit.getRoad().contains(road)){
+                return exit.getId();
+            }
         }
-        return returnString;
+        return 0;
+    }
+    
+    /**
+     * Prints all available exits in the room
+     */
+    public void printExits()
+    {
+        for(Exit exit : exits) {
+            System.out.println(exit.getRoad());
+        }
+    }
+    
+    /**
+     * Sets items in the room.
+     */
+    public void setItem(String name, String description)
+    {
+        Items item = new Items(name, description);
+        items.add(item);
+    }
+    
+    /**
+     * Takes items for the room.
+     */
+    public Items takeItem(String name)
+    {
+        for(Items item : items) {
+            if (item.getName().contains(name)){
+                items.remove(item);
+                return(item);
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Prints available items in the room.
+     */
+    
+    public void printItems()
+    {
+        for(Items item : items){
+            item.printItem();
+        }
+    }
+    
+    /**
+     * Prints all information about the room.
+     */
+    public void printRoom()
+    {
+        System.out.println("You are in " + this.name);
+        System.out.println(this.description);
+        System.out.println("You can go to the :");
+        this.printExits();
+        System.out.println("In the room there are: ");
+        this.printItems();
     }
 
-    /**
-     * Return the room that is reached if we go from this room in direction
-     * "direction". If there is no room in that direction, return null.
-     * @param direction The exit's direction.
-     * @return The room in the given direction.
-     */
-    public Room getExit(String direction) 
-    {
-        return exits.get(direction);
-    }
 }
 
