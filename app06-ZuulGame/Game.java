@@ -73,13 +73,7 @@ public class Game
         // execute them until the game is over.
                 
         boolean finished = false;
-        
-        while (! finished) 
-        {
-            Command command = parser.getCommand();
-            finished = processCommand(command);
-        }
-        
+      
         System.out.println("Thank you for playing.  Good bye.");
     }
 
@@ -96,94 +90,7 @@ public class Game
         System.out.println(currentRoom.getLongDescription());
     }
 
-    /**
-     * Given a command, process (that is: execute) the command.
-     * @param command The command to be processed.
-     * @return true If the command ends the game, false otherwise.
-     */
-    private boolean processCommand(Command command) 
-    {
-        boolean wantToQuit = false;
 
-        CommandWord commandWord = command.getCommandWord();
 
-        switch (commandWord) 
-        {
-            case Unknown:
-                System.out.println("I don't know what you mean...");
-                break;
 
-            case Help:
-                printHelp();
-                break;
-
-            case Go:
-                goRoom(command);
-                break;
-
-            case Quit:
-                wantToQuit = quit(command);
-                break;
-        }
-        return wantToQuit;
-    }
-
-    // implementations of user commands:
-
-    /**
-     * Print out some help information.
-     * Here we print some stupid, cryptic message and a list of the 
-     * command words.
-     */
-    private void printHelp() 
-    {
-        System.out.println("You are lost. You are alone. You wander");
-        System.out.println("around at the university.");
-        System.out.println();
-        System.out.println("Your command words are:");
-        parser.showCommands();
-    }
-
-    /** 
-     * Try to go in one direction. If there is an exit, enter the new
-     * room, otherwise print an error message.
-     */
-    private void goRoom(Command command) 
-    {
-        if(!command.hasSecondWord()) 
-        {
-            // if there is no second word, we don't know where to go...
-            System.out.println("Go where?");
-            return;
-        }
-
-        String direction = command.getSecondWord();
-
-        // Try to leave current room.
-        Room nextRoom = currentRoom.getExit(direction);
-
-        if (nextRoom == null) {
-            System.out.println("There is no door!");
-        }
-        else {
-            currentRoom = nextRoom;
-            System.out.println(currentRoom.getLongDescription());
-        }
-    }
-
-    /** 
-     * "Quit" was entered. Check the rest of the command to see
-     * whether we really quit the game.
-     * @return true, if this command quits the game, false otherwise.
-     */
-    private boolean quit(Command command) 
-    {
-        if(command.hasSecondWord()) {
-            System.out.println("Quit what?");
-            return false;
-        }
-        else {
-            return true;  // signal that we want to quit
-        }
-    }
 }
