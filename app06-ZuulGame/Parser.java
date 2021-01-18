@@ -15,6 +15,9 @@ import java.util.Scanner;
  * 
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
+ * 
+ * @modified by Daniils Pucko
+ * @version 18.01.2021
  */
 public class Parser 
 {
@@ -27,6 +30,22 @@ public class Parser
     public Parser() 
     {
         reader = new Scanner(System.in);
+    }
+    
+    public String[] getCommand()
+    {
+        while(true){
+            System.out.print("> ");
+            String inputLine = reader.nextLine();
+            String[] command = inputLine.split(" ");
+            for(CommandWord command1 : CommandWord.values())
+            {
+                if(command[0].equalsIgnoreCase(command1.name())){
+                    return command;
+                }
+            }
+            System.out.println(command[0] + "is unknown command");
+            }
     }
 
 
