@@ -72,6 +72,31 @@ public class Game
                 {
                     System.out.println("Exit is locked, try to find something to open it.");
                 }
+                else if (id == 6)
+                {
+                    String name;
+                    name = "Key";
+                    if (p1.findItem(name) == true) {
+                        currentRoom = location.getLocation(id);
+                        System.out.println("You have used a key");
+                    }
+                    else {
+                        System.out.println("You need a key to open this door");
+                    }
+                }
+                else if (id == 7)
+                {
+                    String name;
+                    name = "Card";
+                    if (p1.findItem(name) == true) {
+                        currentRoom = location.getLocation(id);
+                        System.out.println("You have swiped a card and entered a room");
+                    }
+                    else
+                    {
+                        System.out.println("You need a card to enter this room");
+                    }
+                }
                 else
                 {
                     System.out.println("You can go this way");
