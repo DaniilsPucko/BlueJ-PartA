@@ -75,6 +75,7 @@ public class Game
                 else
                 {
                     System.out.println("You can go this way");
+                    
                     currentRoom = location.getLocation(id);
                 }
             }
