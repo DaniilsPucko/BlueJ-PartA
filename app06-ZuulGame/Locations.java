@@ -83,7 +83,7 @@ public class Locations
      */
     public Room startingRoom()
     {
-        return locations.get(0);
+        return locations.get(1);
     }
     
     /**
