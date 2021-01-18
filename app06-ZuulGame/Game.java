@@ -84,7 +84,7 @@ public class Game
         printWelcome();        
         boolean finished = false;
         
-        while (finished = true) 
+        while (!finished) 
         {
             currentRoom.printRoom();
             System.out.println("You have: ");
