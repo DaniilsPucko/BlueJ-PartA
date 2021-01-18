@@ -18,50 +18,48 @@ public class Locations
         
         Room location = new Room (0, "Outside", "You are outside in the middle of the abandonned city");
         locations.add(location);
-        location.setExit("North", 3);
-        location.setExit("West", 1);
-        location.setExit("South", 6);
-        location.setExit("East", 2);
+        location.setExit("Shop", 3);
+        location.setExit("Pub", 1);
+        location.setExit("Lab", 6);
+        location.setExit("Theatre", 2);
         
         location = new Room(1, "Pub", "You are now in a destroyed pub.");
         locations.add(location);
-        location.setItem("Energy Drink", "You drank an energy drink and gained +20hp");
-        location.setExit("East", 0);
+        location.setItem("Energy Drink", "Restore 20hp");
+        location.setExit("Outside", 0);
         
         location = new Room(2, "Theater", "You are now in a burned theater. You cross a wire and a wooden plank hits your head, dealing 20 hp damage");
         locations.add(location);
         location.setItem("Wire", "It might be useful later.");
-        location.setExit("West", 0);
+        location.setExit("Outside", 0);
         
         location = new Room(3, "Shop", "You entered an old building, which looks like a shop");
         locations.add(location);
-        location.setExit("South", 0);
-        location.setExit("West", 4);
-        location.setExit("East", 5);
+        location.setExit("Outside", 0);
+        location.setExit("Backyard", 4);
+        location.setExit("Warehouse", 5);
         
         location = new Room(4, "Shop's backyard", "You are on the shop's backyard with a bunch of trash boxes");
         locations.add(location);
         location.setItem("Key", "Looks like a key from a door");
-        location.setExit("East", 3);
+        location.setExit("Shop", 3);
         
         location = new Room(5, "Warehouse", "You are in the shop's ware house.");
         locations.add(location);
         location.setItem("Wooden doll", "Might be useful later.");
-        location.setExit("West", 3);
+        location.setExit("Shop", 3);
         
         location = new Room(6, "Death Inc Lab", "You are in the building, where the virus was invented");
         locations.add(location);
         location.setItem("Card", "Looks like a card of Death Inc's scientist Mark Oliver");
-        location.setExit("North", 0);
-        location.setExit("East", 7);
+        location.setExit("Outside", 0);
+        location.setExit("Office", 7);
         
         location = new Room(7, "Death Inc office", "Here you can find all the truth about what happened");
         locations.add(location);
-        location.setExit("West", 6);
-        location.setExit("Safe", 8);
+        location.setExit("Lab", 6);
+        location.setItem("Documentation", "Documentation, with proves that Death Inc is guilty");
         
-        location = new Room(8, "Safe", "You found all the documentation of Death Inc, now all the world will know the truth");
-        location.setExit("Lab", 7);
     }
     
     /**
@@ -83,7 +81,7 @@ public class Locations
      */
     public Room startingRoom()
     {
-        return locations.get(1);
+        return locations.get(3);
     }
     
     /**
