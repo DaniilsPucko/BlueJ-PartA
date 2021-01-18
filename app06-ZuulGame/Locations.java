@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Write a description of class Locations here.
  * 
@@ -7,16 +7,17 @@
  */
 public class Locations
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    private ArrayList<Room> locations;
 
     /**
      * Constructor for objects of class Locations
      */
     public Locations()
     {
-        // initialise instance variables
-        x = 0;
+        locations = new ArrayList<>();
+        
+        Room location = new Room (0, "Outside", "You are outside in the middle of the abandonned city");
+        
     }
 
     /**
@@ -25,9 +26,8 @@ public class Locations
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int sampleMethod(int y)
+    public int sampleMethod()
     {
-        // put your code here
-        return x + y;
+        
     }
 }
