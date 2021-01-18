@@ -168,6 +168,7 @@ public class Game
         System.out.println("Your task is to find documentation, to prove that they are guilty");
         System.out.println("To do this, you went to abandonned city, where all this started");
         System.out.println("Good luck!");
+        System.out.println("Type help, if you don't know what to do.");
         System.out.println("-------------------------------");
     }
 }
