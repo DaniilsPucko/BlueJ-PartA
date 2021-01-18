@@ -23,7 +23,16 @@ public class Player
         health = 100;
         inventory = new ArrayList<>();
     }
-
+    
+    /**
+     * Prints player status.
+     */
+    public void printPlayer()
+    {
+        System.out.println(this.name);
+        System.out.println("Your health is: " + health);
+    }
+    
     /**
      * Prints score of the player
      */
