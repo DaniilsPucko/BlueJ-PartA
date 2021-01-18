@@ -4,30 +4,32 @@
  * 
  * @author  Michael Kölling and David J. Barnes
  * @version 2016.02.29
+ * 
+ * @modified by Daniils Pucko
+ * @version 16.01.2021
  */
 public enum CommandWord
 {
     // A value for each command word along with its
     // corresponding user interface string.
-    GO("go"), QUIT("quit"), HELP("help"), UNKNOWN("?");
+    Go(1), Drop(2), Give(3), Take(4), Quit(5), Help(6), Unknown(7);
     
-    // The command string.
-    private String commandString;
+    private final int id;
     
     /**
-     * Initialise with the corresponding command string.
-     * @param commandString The command string.
+     * Gives id the commandword.
      */
-    CommandWord(String commandString)
+    // The command string.
+    private CommandWord(int id)
     {
-        this.commandString = commandString;
+        this.id = id;
     }
     
     /**
-     * @return The command word as a string.
+     * Returns the id of the commandword.
      */
-    public String toString()
+    public int getValue()
     {
-        return commandString;
+        return id;
     }
 }
