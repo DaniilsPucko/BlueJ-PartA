@@ -92,6 +92,13 @@ public class Game
                     if (p1.findItem(name) == true) {
                         currentRoom = location.getLocation(id);
                         System.out.println("You have swiped a card and entered a room");
+                        name = "Documentation";
+                        if(p1.findItem(name) == true) {
+                            System.out.println("Congratulations!");
+                            System.out.println("You have found documentation.");
+                            System.out.println("Now everyone will know, what is the reason of all deaths");
+                            boolean playing = false;
+                        }
                     }
                     else
                     {
