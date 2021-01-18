@@ -21,14 +21,18 @@ public class Game
 {
     private Parser parser;
     private Room currentRoom;
-        
+    private Locations location;
+    private Player player;
+    
     /**
      * Create the game and initialise its internal map.
      */
     public Game() 
     {
-        createRooms();
+        location = new Locations();
         parser = new Parser();
+        player = new Player("Reporter Mike");
+        currentRoom = location.start();
     }
 
     /**
