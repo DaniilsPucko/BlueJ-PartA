@@ -67,7 +67,7 @@ public class Room
      */
     public void setExit(String road, int id)
     {
-        Exit exit = new Exit(id, road);
+        Exit exit = new Exit(road, id);
         exits.add(exit);
     }
     
