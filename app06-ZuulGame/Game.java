@@ -45,6 +45,7 @@ public class Game
         boolean playing = true;
         while(playing){
             currentRoom.printRoom();
+            player.printPlayer();
             System.out.println("In your inventory you have: ");
             player.printItems();
             String[] command1 = parser.getCommand();
@@ -97,6 +98,12 @@ public class Game
                         System.out.println("You need a card to enter this room");
                     }
                 }
+                else if (id == 2)
+                {
+                    System.out.println("You can go this way");
+                    p1.affectHealth(-20);
+                    p1.printPlayer();
+                }
                 else
                 {
                     System.out.println("You can go this way");
@@ -118,7 +125,12 @@ public class Game
                 {
                     System.out.println("No such item in this room");
                 }
-                else 
+                else if (item.getName().contains("Energy Drink"))
+                {
+                    p1.affectHealth(+20);
+                    p1.printPlayer();
+                }
+                else
                 {
                 System.out.println("The" + item + " has been taken");
                 player.addItem(item);
