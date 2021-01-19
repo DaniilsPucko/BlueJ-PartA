@@ -115,7 +115,7 @@ public class Game
                 {
                     System.out.println("You can go this way");
                     currentRoom = location.getLocation(id);
-                    p1.affectHealth(-20);;
+                    p1.affectHealth(-100);;
                 }
                 else
                 {
