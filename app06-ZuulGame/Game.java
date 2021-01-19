@@ -78,7 +78,7 @@ public class Game
                 int id = location1.getExit(command1[1]);
                 if (id == -1) 
                 {
-                    System.out.println("Exit is locked, try to find something to open it.");
+                    System.out.println("You cannot go this way.");
                 }
                 else if (id == 6)
                 {
