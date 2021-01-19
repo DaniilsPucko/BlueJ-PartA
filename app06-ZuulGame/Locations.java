@@ -28,7 +28,7 @@ public class Locations
         location.setItem("Energy Drink", "Restore 20hp");
         location.setExit("Outside", 0);
         
-        location = new Room(2, "Theater", "You are now in a burned theater. You cross a wire and a wooden plank hits your head, dealing 20 hp damage");
+        location = new Room(2, "Theater", "You are now in a burned theater. You cross a wire and a wooden plank hits your head, dealing 100 hp damage");
         locations.add(location);
         location.setItem("Wire", "It might be useful later.");
         location.setExit("Outside", 0);
