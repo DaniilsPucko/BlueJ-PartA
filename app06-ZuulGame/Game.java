@@ -63,6 +63,11 @@ public class Game
                 System.out.println("Now everyone will know, what is the reason of all deaths");
                 playing = false;        
             } 
+            
+            if(player.getHealth() <= 0){
+                System.out.println("You died!");
+                System.out.println("If you want to try again, start a new game.");
+            }
         }
     }
     
