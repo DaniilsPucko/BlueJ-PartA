@@ -67,6 +67,7 @@ public class Game
             if(player.getHealth() <= 0){
                 System.out.println("You died!");
                 System.out.println("If you want to try again, start a new game.");
+                playing = false;
             }
         }
     }
